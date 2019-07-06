@@ -1,2 +1,3 @@
-# census-govern
-Representation and Governance in the US Census (Data Science Discovery Summer 2019)
+# census-notebooks
+Discovering US Census: Jyputer Notebook Curriculum Modules
+Data Science Discovery Summer 2019
