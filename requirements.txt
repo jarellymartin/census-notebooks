@@ -1,0 +1,6 @@
+setuptools
+ipywidgets
+matplotlib>=3.0.0
+pandas
+scipy
+seaborn
