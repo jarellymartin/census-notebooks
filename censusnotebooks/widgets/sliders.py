@@ -38,7 +38,7 @@ class Slider:
             else:
                 self.start = int(self.start)
 
-        self.showSlider()
+        display(self.showSlider())
 
     def showSlider(self):
         """Return this slider according to appropriate slider type."""

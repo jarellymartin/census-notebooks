@@ -13,7 +13,7 @@ class RadioButton:
             self.options.append(option)
 
         self.description = input('Enter the description of your RadioButton: ')
-        return widgets.RadioButton(
+        display(widgets.RadioButton(
         options=self.options,
         description=self.description
-        )
+        ))
