@@ -8,12 +8,15 @@ class RadioButton:
         self.options = []
         while True:
             option = input('Add an option to your RadioButton (or type \'stop\' if there are no more): ')
-            if option == 'stop':
+            if option.lower() == 'stop':
                 break
             self.options.append(option)
 
         self.description = input('Enter the description of your RadioButton: ')
-        display(widgets.RadioButton(
-        options=self.options,
-        description=self.description
-        ))
+
+        radio_button = widgets.RadioButton(
+                    options=self.options,
+                    description=self.description
+                    )
+
+        display(radio_button)

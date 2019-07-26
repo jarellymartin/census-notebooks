@@ -38,10 +38,11 @@ class Slider:
             else:
                 self.start = int(self.start)
 
-        display(self.showSlider())
+        slider = self.showSlider()
+        display(slider)
 
     def showSlider(self):
-        """Return this slider according to appropriate slider type."""
+        """Return this slider according to appropriate slider type. Used in __init__."""
         if self.slider_type == 'integer':
             return self.integer()
         if self.slider_type == 'decimal':

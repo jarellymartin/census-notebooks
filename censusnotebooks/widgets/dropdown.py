@@ -15,8 +15,10 @@ class Dropdown:
         self.value = input('Enter your starting value of your dropdown box: ')
         self.description = input('Enter the description of your dropdown box: ')
 
-        display(widgets.Dropdown(
+        dropdown = widgets.Dropdown(
         options=self.options,
         value=self.value,
         description=self.description
-        ))
+        )
+
+        display(dropdown)

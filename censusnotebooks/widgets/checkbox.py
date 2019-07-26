@@ -3,7 +3,9 @@ import ipywidgets as widgets
 class Checkbox:
 
     def __init__(self):
-        """Initializes a Checkbox through uesr input."""
+        """Initializes a Checkbox through user input."""
 
         self.description = input('Enter the description for your Checkbox: ')
-        display(widgets.Checkbox(description=self.description))
+        checkbox = widgets.Checkbox(description=self.description)
+
+        display(checkbox)
