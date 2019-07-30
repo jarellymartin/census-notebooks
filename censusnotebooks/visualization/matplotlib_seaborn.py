@@ -41,11 +41,11 @@ class Plot():
         else:
             arg_max = 1
 
-        columns = list(data.columns)
+        columns = list(self.data.columns)
 
         print('Here are the columns of your table:')
         for c in columns:
-            print(f'({columns.index(c) + 1}) {t} \n')
+            print(f'({columns.index(c) + 1}) {c} \n')
 
         column_holder1 = input("Enter the column you would like to plot: \n")
 
@@ -68,15 +68,13 @@ class Plot():
             print(f'You are plotting {self.arg} and {self.arg2}. \n')
 
 
-    def 
-
 
     def ask_all(self):
-        self.ssk_type()
+        self.ask_type()
         self.ask_columns()
 
 
     def main():
         print("")
 
-
+# main()
