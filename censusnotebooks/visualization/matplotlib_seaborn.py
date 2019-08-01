@@ -19,6 +19,7 @@ class Plot():
         self.xlab = None
         self.ylab = None
         self.title = None
+        self.ax = None
 
     def ask_type(self):
         
@@ -82,21 +83,23 @@ class Plot():
 
 
     def plotting(self):
-        if self.type = 'histogram':
-            ax = sns.displot(a=self.data.loc[:, self.arg], kde=False);
+        if self.type == 'histogram':
+            self.ax = sns.distplot(a=self.data.loc[:, self.arg], kde=False);
 
-        else if self.type = 'barplot':
-            ax = sns.barplot(x=self.arg, y=self.arg2, data=self.data);
+        elif self.type == 'barplot':
+            self.ax = sns.barplot(x=self.arg, y=self.arg2, data=self.data);
 
-        else if self.type = 'scatterplot':
-            ax = sns.scatterplot(x=self.arg, y=self.arg2, data=self.data);
+        elif self.type == 'scatterplot':
+            self.ax = sns.scatterplot(x=self.arg, y=self.arg2, data=self.data);
 
-        else if self.type = 'lineplot':
-            ax = sns.lineplot(x=self.arg, y=self.arg2, data=self.data);
+        elif self.type == 'lineplot':
+            self.ax = sns.lineplot(x=self.arg, y=self.arg2, data=self.data);
 
-        ax.set(xlabel=self.xlabel,
-               ylabel=self.ylabel,
-               title=self.title);
+    def labeling(self):
+        self.ax.set(title=self.title,
+                    xlabel=self.xlab,
+                    ylabel=self.ylab
+                    )
 
         plt.show();
 
@@ -106,3 +109,4 @@ class Plot():
         self.ask_columns()
         self.ask_labels()
         self.plotting()
+        self.labeling()
