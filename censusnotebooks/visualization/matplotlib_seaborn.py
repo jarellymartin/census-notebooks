@@ -16,7 +16,9 @@ class Plot():
         self.type = None
         self.arg = None
         self.arg2 = None
-
+        self.xlab = None
+        self.ylab = None
+        self.title = None
 
     def ask_type(self):
         
@@ -36,10 +38,10 @@ class Plot():
 
 
     def ask_columns(self):
-        if self.type == 'scatterplot':
-            arg_max = 2
-        else:
+        if self.type == 'histogram' :
             arg_max = 1
+        else:
+            arg_max = 2
 
         columns = list(self.data.columns)
 
@@ -68,13 +70,39 @@ class Plot():
             print(f'You are plotting {self.arg} and {self.arg2}. \n')
 
 
+    def ask_labels(self):
+        self.xlab = input("Enter the x-axis label for your plot: \n")
+        self.ylab = input("Enter the y-axis label for your plot: \n")
+        self.title = input("Enter the title for your plot: \n")
 
-    def ask_all(self):
+
+    def ask_figure_size(self):
+        ### Add this in later
+        return None
+
+
+    def plotting(self):
+        if self.type = 'histogram':
+            ax = sns.displot(a=self.data.loc[:, self.arg], kde=False);
+
+        else if self.type = 'barplot':
+            ax = sns.barplot(x=self.arg, y=self.arg2, data=self.data);
+
+        else if self.type = 'scatterplot':
+            ax = sns.scatterplot(x=self.arg, y=self.arg2, data=self.data);
+
+        else if self.type = 'lineplot':
+            ax = sns.lineplot(x=self.arg, y=self.arg2, data=self.data);
+
+        ax.set(xlabel=self.xlabel,
+               ylabel=self.ylabel,
+               title=self.title);
+
+        plt.show();
+
+
+    def new_plot(self):
         self.ask_type()
         self.ask_columns()
-
-
-    def main():
-        print("")
-
-# main()
+        self.ask_labels()
+        self.plotting()
