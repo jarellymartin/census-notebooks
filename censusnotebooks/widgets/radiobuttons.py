@@ -1,4 +1,5 @@
 import ipywidgets as widgets
+from IPython.display import display
 
 class RadioButton:
 
@@ -14,7 +15,7 @@ class RadioButton:
 
         self.description = input('Enter the description of your RadioButton: ')
 
-        radio_button = widgets.RadioButton(
+        radio_button = widgets.RadioButtons(
                     options=self.options,
                     description=self.description
                     )
