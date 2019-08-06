@@ -13,12 +13,11 @@ class Dropdown:
                 break
             self.options.append(option)
 
-        self.value = input('Enter your starting value of your dropdown box: ')
         self.description = input('Enter the description of your dropdown box: ')
 
         dropdown = widgets.Dropdown(
         options=self.options,
-        value=self.value,
+        value=self.options[0],
         description=self.description
         )
 
