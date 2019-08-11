@@ -1,3 +1,5 @@
 .DS_Store
 .ipynb_checkpoints/
-/__pychche__
+__pychche__/
+censusnotebook/__pychche__/
+*.pyc
